@@ -14,12 +14,12 @@ SOSP2017 은 50년 역사상 최초 기록을 몇개 세움:
 
 ## 분야
  - kernels 
-    - NEVE: Nested Virtualization Extensions for ARM 
+    - NEVE: Nested Virtualization Extensions for ARM 
     - My VM is Lighter (and Safer) than your Container
     - Multiprogramming a 64kB Computer Safely and Efficiently
  - storage systems
- - privacy and security
-    - WatchIT: Who Watches Your IT Guy?
+ - privacy and security (miguel castro)
+    - WatchIT: Who Watches Your IT Guy?
     - The Efficient Server Audit Problem, Deduplicated Re-execution, and the Web
     - Secure Page Fusion with VUsion
  - understanding and fixing bugs
@@ -39,6 +39,11 @@ SOSP2017 은 50년 역사상 최초 기록을 몇개 세움:
     - MittOS: Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-Aware OS Interface
     - Monotasks: Architecting for Performance Clarity in Data Analytics Frameworks
 Management in Large Cloud Platforms
+ - Understanding failures
+    - Log20: Fully Automated Optimal Placement of Log Printing Statements under Specified Overhead Threshold
+    - Lazy Diagnosis of In-Production Concurrency Bugs
+    - CrystalNet: Faithfully Emulating Large Production Networks
  - verification
     - Komodo: Using verification to disentangle secure-enclave hardware from software
- - data analysis
+ - Data analytics
+ - Adaptation and repair
