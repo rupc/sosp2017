@@ -13,12 +13,12 @@ SOSP2017 은 50년 역사상 최초 기록을 몇개 세움:
  - Verification(Komodo: Using verification to disentangle secure-enclave hardware from software)
 
 ## 분야
- - kernels 
+ - kernels  
     - NEVE: Nested Virtualization Extensions for ARM 
     - My VM is Lighter (and Safer) than your Container
     - Multiprogramming a 64kB Computer Safely and Efficiently
- - storage systems
- - privacy and security (miguel castro)
+ - storage systems  
+ - privacy and security (miguel castro)  
     - WatchIT: Who Watches Your IT Guy?
     - The Efficient Server Audit Problem, Deduplicated Re-execution, and the Web
     - Secure Page Fusion with VUsion
