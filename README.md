@@ -57,8 +57,10 @@ Management in Large Cloud Platforms
 기존의 symbolic 실행은 버그 재현을 위해 버그에 이르는 모든 경로를 검색했지만, Pensieve는 Partial Trace Observation
 - 펜시브는 인과적으로 의존적인 이벤트들간의 연결 고리를 추론하는 나름의 규칙을 갖고 있는데 이를 바탕으로 버그를 추적해냄. 
 - 즉, 무식하게 brute-force로 찾지 않고, 관련성이 있는 것만 추적하겠다는 접근인데... 어떻게 보면 너무 당연
+
+
 ### Komodo: Using verification to disentangle secure-enclave hardware from software (enclave 하드웨어를 소프트웨어로부터 분리시키기 위한 검증 기술)
-#### 문제: Intel SGX은 강력한 보안 기능(isolation)을 제공하기 위해 x86 아키텍처를 복잡하게 만들었음.
+#### 문제: Intel SGX은 강력한 보안 기능(isolation)을 제공하기 위해 x86 아키텍처를 복잡하게 만들었음 --> (HW, SW의 의존관계가 복잡하여 유연성이 떨어짐)
 (마이크로 커널이 초기에 단순함을 추구하였지만 이후 복잡해진 것처럼)
     : 이해하기 매우 힘들게 실리콘을 배치하고 마이크로 코드를 짬.
     - 하드웨어 기반의 보안(hardware based security): 일반적으로 순수 소프트웨어보다 더 나은 성능 제공, 순수 소프트웨어가 제공하지 못하는 기능 제공. 
