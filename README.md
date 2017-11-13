@@ -41,10 +41,25 @@ Management in Large Cloud Platforms
 
 ## Paper abstract
 
-### 문제: 저전력, 빈약한 하드웨어 지원을 갖는 컴퓨터에 어떻게 안전하고 효율적으로 멀티프로그래밍 기법을 제공할 것인가?
+
+### The Efficient Server Audit Problem, Deduplicated Re-execution, and the Web (서버 감독을 효율적으로 하는 방법, 중복이 제거된 재-실행, 그리고 웹)
+#### 문제: 서버에 업로드한 내 프로그램이 제대로 실행되는지 어떻게 신뢰할 수 있겠는가?(특히 concurrent feature를 많이 사용하는 program일때)
+전통적인 secure remote computation 문제. 내가 내 프로그램짜서 서버에 업로드하고, 서버가 내 프로그램을 실행시켰다고 하자. 내 프로그램은 이러저러한 상황에서 이러저러한 로그를 찍도록 되어 있다. 서버는 프로그램을 실행시키면서 생성된 로그를 나에게 보내준다. 나는 이를 곧이곧대로 믿을 것인가? 서버가 올바르다면야, 문제가 안 되겠지만 서버가 의도적으로 로그를 조작할 수도 있지 않는가? 또는 동시성 프로그래밍때문에 의도치 않은 에러가 발생할 수도 있지 않을까? 논문에서는 이 문제를 Efficient Server Audit Problem으로 규정.
+
+#### 해결: 동시다발적인 재실행(simultaneous replay), 동시성 실행의 효율적인 검증(efficient verification of concurrent executions)
+
+### DeepXplore: Automated Whitebox Testing of Deep Learning Systems (딥 러닝 시스템을 위한 화이트 박스 테스팅의 자동화)
+
+#### 문제: 기존의 딥러닝 테스트 케이스는 사람이 일일히 수작업으로 하나씩 데이터에 라벨링을 해주었는데(감독 학습인 경우), 시스템이 복잡해지면서 이 방식에 한계가 생김(특히, corner case ). 인간이 이해하기 무지막지하게 어려운 복잡한 딥러닝 시스템은 어떻게 테스팅 할 것인가? 
+
+#### 해결: DeepXplore 을 제안
+DL의 구성 요소에 대한 테스트 케이스를 자동 생성해주는 툴. 특히 corner case를 잘 찾아줌. 구체적으로는 neuron coverage 개념을 도입하고 이를 측정: neuron coverage는 뉴럴 네트웍 상에서의 테스트 되는 뉴런의 경로를 의미. 그리고 자동 생성된 테스트 케이스를 가지고 같은 딥러닝 시스템을 다시 훈련시키면 model accuacy가 3% 올라간다는 것을 보여줌
+
+### Multiprogramming a 64 kB Computer Safely and Efficiently
+#### 문제: 저전력, 빈약한 하드웨어 지원을 갖는 컴퓨터에 어떻게 안전하고 효율적으로 멀티프로그래밍 기법을 제공할 것인가?
 저전력 마이크로컨트롤러들은 여러 프로세스들을 메모리에 올려서 실행하는 멀티프로그래밍 기법을 지원을 잘 하지 못한다. 왜냐하면 하드웨어 기반의 지원이 빈약하기 때문. 하지만, 임베디드 컴퓨팅의 전통적인 특수 목적(special purpose) 애플리케이션보다는 다양한 프로그램을 돌릴 수 있게 해주는 소프트웨어 플랫폼 개발이 중요해지고 있음. 
 
-### 해결: Tock OS를 제시
+#### 해결: Tock OS를 제시
 Tock는 
 - 저전력 플랫폼 지원
 - 제한된 하드웨어 보호 기능들의 이점들을 최대한 활용
