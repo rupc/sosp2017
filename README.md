@@ -5,43 +5,6 @@ SOSP2017 은 50년 역사상 최초 기록을 몇개 세움:
 * SOSP 2017은 최초로 북아메리카와 유럽 대륙 이외의 곳에서 열리는 행사임.
 * 233개의 제출된 논문 중, 39개의 논문이 최종 승인되었는데\(39/233 = 16.7% acceptance ratio\), 이는 SOSP 역사상 최대 수치임
 
-## 분야
-
-* kernels  
-  * NEVE: Nested Virtualization Extensions for ARM 
-  * My VM is Lighter \(and Safer\) than your Container
-  * Multiprogramming a 64kB Computer Safely and Efficiently
-* storage systems  
-* privacy and security \(miguel castro\)  
-  * WatchIT: Who Watches Your IT Guy?
-  * The Efficient Server Audit Problem, Deduplicated Re-execution, and the Web
-  * Secure Page Fusion with VUsion
-* understanding and fixing bugs
-  * DeepXplore: Automated Whitebox Testing of Deep Learning Systems
-  * Pensieve: Non-Intrusive Failure Reproduction for Distributed Systems using the Event Chaining Approach
-  * Canopy: An End-to-End Performance Tracing And Analysis System
-* in-network computing
-  * Eris: Coordination-Free Consistent Transactions Using In-Network Concurrency Control
-  * NetCache: Balancing Key-Value Stores with Fast In-Network Caching
-  * KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC
-* scalability 
-  * Algorand: Scaling Byzantine Agreements for Cryptocurrencies
-  * Scaling a file system to many cores using an operation log
-  * SVE: Distributed Video Processing at Facebook Scale
-* resource management
-  * Resource Central: Understanding and Predicting Workloads for Improved Resource
-  * MittOS: Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-Aware OS Interface
-  * Monotasks: Architecting for Performance Clarity in Data Analytics Frameworks
-    Management in Large Cloud Platforms
-* Understanding failures
-  * Log20: Fully Automated Optimal Placement of Log Printing Statements under Specified Overhead Threshold
-  * Lazy Diagnosis of In-Production Concurrency Bugs
-  * CrystalNet: Faithfully Emulating Large Production Networks
-* verification
-  * Komodo: Using verification to disentangle secure-enclave hardware from software
-* Data analytics
-* Adaptation and repair
-
 ## Paper abstract
 
 ### Canopy: An End-to-End Performance Tracing And Analysis System
@@ -80,7 +43,7 @@ Canopy\(이하, 캐노피\)는 페이스 북에서 개발한 성능 분석 도�
 
 ### Eris: Coordination-Free Consistent Transactions Using In-Network Concurrency Control \(Eris: 내부 네트워크의 병행성 제어를 사용한 합의 없는 일관된 트랜잭션 처리 시스템\)
 
-본 논문에서 제시된 Eris는 병행성 제어를 사용하여 합의 없이 일관성을 유지하는 트랜잭션 기 법을 제시한다. 오늘 날의 많은 웹 서비스와 애플리케이션들은 분산 스토리지 시스템에 많이 의 존한다. 분산 스토리지에서 일어나는 많은 작업은 데이터를 분산 시켜 놓는 작업, 그리고 분산 된 저장소들 사이의 일관성을 유지하는 것과 관련된다. 이를 소위 합의\(consensus\) 또는 협의 \(coordination\) 라고 부르는데, 이 과정은 많은 통신을 유발한다. Eris 는 트랜잭션들 사이의 독립 성\(independence\)를 고려하여, 정상 동작 과정\(normal case operation\)에서의 합의를 제거하여 트 랜잭션 처리 성능을 향상 시킨 트랜잭션 프로토콜이다. 이를 지원하기 위해 Eris는 네트워크 내 부의 병행성 제어\(In network concurrency control\) 기능을 사용한다.
+본 논문에서 제시된 Eris는 병행성 제어를 사용하여 합의 없이 일관성을 유지하는 트랜잭션 기법을 제시한다. 오늘 날의 많은 웹 서비스와 애플리케이션들은 분산 스토리지 시스템에 많이 의 존한다. 분산 스토리지에서 일어나는 많은 작업은 데이터를 분산 시켜 놓는 작업, 그리고 분산 된 저장소들 사이의 일관성을 유지하는 것과 관련된다. 이를 소위 합의\(consensus\) 또는 협의 \(coordination\) 라고 부르는데, 이 과정은 많은 통신을 유발한다. Eris 는 트랜잭션들 사이의 독립 성\(independence\)를 고려하여, 정상 동작 과정\(normal case operation\)에서의 합의를 제거하여 트 랜잭션 처리 성능을 향상 시킨 트랜잭션 프로토콜이다. 이를 지원하기 위해 Eris는 네트워크 내 부의 병행성 제어\(In network concurrency control\) 기능을 사용한다.
 
 이는 다음과 같은 기술적 목표를 가진다.
 
@@ -227,7 +190,8 @@ Atom의 아키텍처는 traffic analysis 공격에 대응하는 구조임. 아�
 
 * on-demand
 
-* user-mode 
+* user-mode
+
 * concurrent
   * Komodo는 Intel SGX 보다 더 낫다?  \(어떤 면에서?\)
 * enclave의 모든 기능을 제공.
