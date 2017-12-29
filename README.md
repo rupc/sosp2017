@@ -62,11 +62,13 @@ Canopy\(이하, 캐노피\)는 페이스 북에서 개발한 성능 분석 도�
 2. 고수준 분석에서부터 저수준 분석을 아우르는 분석
 3. 엔지니어에게 필요한 데이터만 제공하기\(일반적인 인터페이스 뿐만 아니라, 엔지니어 맞춤형\(customization\) 데이터만 추출해서 제공하는 인터페이스 제공\) 
 
+캐노피는 이 문제들을 해결하기 위해 완전한 파이프라인을 제공한다. 파이프라인은 전통적인 유닉스
+
 ### SVE: Distributed Video Processing at Facebook Scale
 
 ### 
 
-###  NetCache: Balancing Key-Value Stores with Fast In-Network Caching
+### NetCache: Balancing Key-Value Stores with Fast In-Network Caching
 
 ### Resource Central: Understanding and Predicting Workloads for Improved Resource Management in Large Cloud Platforms
 
@@ -75,9 +77,6 @@ Canopy\(이하, 캐노피\)는 페이스 북에서 개발한 성능 분석 도�
 ### Monotasks: Architecting for Performance Clarity in Data Analytics Frameworks
 
 ### NEVE: Nested Virtualization Extensions for ARM
-
-  
-
 
 ### Eris: Coordination-Free Consistent Transactions Using In-Network Concurrency Control \(Eris: 내부 네트워크의 병행성 제어를 사용한 합의 없는 일관된 트랜잭션 처리 시스템\)
 
@@ -225,6 +224,7 @@ Atom의 아키텍처는 traffic analysis 공격에 대응하는 구조임. 아�
   * Komodo는 고립 실행 환경을 제공함. 그리고 다음과 같은 특징이 있음
 
 * attested
+
 * on-demand
 * user-mode 
 * concurrent
