@@ -44,19 +44,55 @@ SOSP2017 은 50년 역사상 최초 기록을 몇개 세움:
 
 ## Paper abstract
 
+### Canopy: An End-to-End Performance Tracing And Analysis System
+
+Canopy\(이하, 캐노피\)는 페이스 북에서 개발한 성능 분석 도구이다. 캐노피는 클라이언트의 요청을 받는 지점에서부터 요청이 처리된 후 완료되기까지의 과정\(end-to-end\)을 추적하고 데이터를 만들어내고 이들 데이터를 분석한다. 클라이언트는 웹 브라우저, 모바일 애플리케이션, 백엔드 서버를 포함한다. 단순히 네트워크 관련 성능 분석 도구라면 별 다른 메리트가 없겠지만 캐노피는 다음과 같은 점에서 기존 성능 분석 도구들과의 차이를 보인다.
+
+* 실시간 분석
+* 대규모 분석: 10억개 이상의 사용자 요청을 취합한 데이터를 생성하고 분석
+* 사용자 별 기능\(user specific feature\) 분석  
+
+실시간 분석은 서버 상에 코드가 업데이트가 되었다거나, 설정을 바꾼다거나 하는 상황에서도 적용된다. 그리고 다양한 장치, 다양한 사용자들이 만들어내는 다양한 요청, 다양한 데이터 센터 서버들과 같이 이질적인 환경을 가정하기 때문에 각 상황마다 서로 다른 성능 측정 메트릭이 필요하다. 하나의 일관된 메트릭만으로는 모든 이질적인 상황을 일관되게 표현하는 것은 그다지 깔끔하지 못하다고 보기 때문이다.
+
+캐노피도 물론 기존에 잘 만들어진 성능 분석 도구를 아예 안 쓰지는 않았다. X-Trace: A Pervasive Network Tracing Framework\(NSDI 2007\), Dapper: a Large-Scale Distributed Systems Tracing Infrastructure\(Google Tech report, 2010\) 를 핵심 엔진으로 사용하고 있다.
+
+정리해서, 캐노피가 해결하려는 3가지 주요 문제는 다음과 같다.
+
+1. 이질적인 환경에서의 성능 분석\(다양한 실행 환경, 데이터 품질, 소프트웨어 스택의 각 계층\)
+2. 고수준 분석에서부터 저수준 분석을 아우르는 분석
+3. 엔지니어에게 필요한 데이터만 제공하기\(일반적인 인터페이스 뿐만 아니라, 엔지니어 맞춤형\(customization\) 데이터만 추출해서 제공하는 인터페이스 제공\) 
+
+### SVE: Distributed Video Processing at Facebook Scale
+
+### 
+
+###  NetCache: Balancing Key-Value Stores with Fast In-Network Caching
+
+### Resource Central: Understanding and Predicting Workloads for Improved Resource Management in Large Cloud Platforms
+
+### MittOS: Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-Aware OS Interface KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC
+
+### Monotasks: Architecting for Performance Clarity in Data Analytics Frameworks
+
+### NEVE: Nested Virtualization Extensions for ARM
+
+  
+
+
 ### Eris: Coordination-Free Consistent Transactions Using In-Network Concurrency Control \(Eris: 내부 네트워크의 병행성 제어를 사용한 합의 없는 일관된 트랜잭션 처리 시스템\)
 
-본 논문에서 제시된 Eris는 병행성 제어를 사용하여 합의 없이 일관성을 유지하는 트랜잭션 기 법을 제시한다. 오늘 날의 많은 웹 서비스와 애플리케이션들은 분산 스토리지 시스템에 많이 의 존한다. 분산 스토리지에서 일어나는 많은 작업은 데이터를 분산 시켜 놓는 작업, 그리고 분산 된 저장소들 사이의 일관성을 유지하는 것과 관련된다. 이를 소위 합의\(consensus\) 또는 협의 \(coordination\) 라고 부르는데, 이 과정은 많은 통신을 유발한다. Eris 는 트랜잭션들 사이의 독립 성\(independence\)를 고려하여, 정상 동작 과정\(normal case operation\)에서의 합의를 제거하여 트 랜잭션 처리 성능을 향상 시킨 트랜잭션 프로토콜이다. 이를 지원하기 위해 Eris는 네트워크 내 부의 병행성 제어\(In network concurrency control\) 기능을 사용한다. 
+본 논문에서 제시된 Eris는 병행성 제어를 사용하여 합의 없이 일관성을 유지하는 트랜잭션 기 법을 제시한다. 오늘 날의 많은 웹 서비스와 애플리케이션들은 분산 스토리지 시스템에 많이 의 존한다. 분산 스토리지에서 일어나는 많은 작업은 데이터를 분산 시켜 놓는 작업, 그리고 분산 된 저장소들 사이의 일관성을 유지하는 것과 관련된다. 이를 소위 합의\(consensus\) 또는 협의 \(coordination\) 라고 부르는데, 이 과정은 많은 통신을 유발한다. Eris 는 트랜잭션들 사이의 독립 성\(independence\)를 고려하여, 정상 동작 과정\(normal case operation\)에서의 합의를 제거하여 트 랜잭션 처리 성능을 향상 시킨 트랜잭션 프로토콜이다. 이를 지원하기 위해 Eris는 네트워크 내 부의 병행성 제어\(In network concurrency control\) 기능을 사용한다.
 
 이는 다음과 같은 기술적 목표를 가진다.
 
-* 여러 목적지 데이터 센터에 전달된 메시지들에 대하여 전역적인 순서 정렬\(globally consistent ordering\)을 제공 
+* 여러 목적지 데이터 센터에 전달된 메시지들에 대하여 전역적인 순서 정렬\(globally consistent ordering\)을 제공
+
   * 메시지 전달은 손실될 수 있음
   * 수신자는 손실된 메시지를 탐지할 수 있음
 
- 따라서 병행성 제어의 뜻은 다수의 목적지에 도착한 메시지들을 서로 같은 순서로 처리하기 위 한 순서 정렬\(ordering\) 기능을 나타낸다. 전통적인 합의 알고리즘의 관점에서 설명하면, 클라이 언트는 단일한 프라이머리 노드에게 메시지를 전달하고 나면 이후의 과정은 프라이머리와 나 머지 리플리카 노드들 사이의 합의가 일어나지만, Eris에서는 클라이언트는 프라이머리 역할을 하는 노드 뿐만 아니라 서로 다른 노드들에 메시지를 전송할 수 있다. 사실 이러한 방식이 상태 머신 복제\(state mahcine replication\)의 기본적인 테크닉이기도 하다. Eris는 또한 시퀀서 \(sequencer\)라는 특별한 노드를 설정하는데 이 노드의 역할은 전통적인 SMR 프로토콜에서 프 라이머리 노드와 유사하다. 
+  따라서 병행성 제어의 뜻은 다수의 목적지에 도착한 메시지들을 서로 같은 순서로 처리하기 위 한 순서 정렬\(ordering\) 기능을 나타낸다. 전통적인 합의 알고리즘의 관점에서 설명하면, 클라이 언트는 단일한 프라이머리 노드에게 메시지를 전달하고 나면 이후의 과정은 프라이머리와 나 머지 리플리카 노드들 사이의 합의가 일어나지만, Eris에서는 클라이언트는 프라이머리 역할을 하는 노드 뿐만 아니라 서로 다른 노드들에 메시지를 전송할 수 있다. 사실 이러한 방식이 상태 머신 복제\(state mahcine replication\)의 기본적인 테크닉이기도 하다. Eris는 또한 시퀀서 \(sequencer\)라는 특별한 노드를 설정하는데 이 노드의 역할은 전통적인 SMR 프로토콜에서 프 라이머리 노드와 유사하다.
 
-Eris는 노드들을 그룹핑 시켜 멀티캐스트 메시지의 수신 노드들을 정해둔다. 그리고 시퀀서 \(sequencer\) 노드는 각 그룹 별 카운터를 관리한다. 노드들을 그룹핑 시키는 이유는 각 트랜잭션 별 담당하는 노드 그룹을 형성하여 독립적인 트랜잭션은 합의 없이 처리하기 위함이다. 
+Eris는 노드들을 그룹핑 시켜 멀티캐스트 메시지의 수신 노드들을 정해둔다. 그리고 시퀀서 \(sequencer\) 노드는 각 그룹 별 카운터를 관리한다. 노드들을 그룹핑 시키는 이유는 각 트랜잭션 별 담당하는 노드 그룹을 형성하여 독립적인 트랜잭션은 합의 없이 처리하기 위함이다.
 
 ### The Efficient Server Audit Problem, Deduplicated Re-execution, and the Web \(서버 감독을 효율적으로 하는 방법, 중복이 제거된 재-실행, 그리고 웹\)
 
@@ -183,9 +219,11 @@ Atom의 아키텍처는 traffic analysis 공격에 대응하는 구조임. 아�
 
 * 하드웨어 기반의 보안\(hardware based security\): 일반적으로 순수 소프트웨어보다 더 나은 성능 제공, 순수 소프트웨어가 제공하지 못하는 기능 제공. 
 * 하드웨어 보안\(hardware only security\): 유연성이 떨어짐. 결함이 발견되었을때 혹은 새기능을 추가하고 싶을때, 업데이트 하기가 매우 힘듬. 여기서 Intel SGX의 단점이 제시됨. 그리고 이점을 노린게 Komodo임. 즉, enclave 하드웨어 기능 따로, 소프트웨어 따로 구성해서 유연성 높이자는 전략. \(구체적으로는 어떤식인지는 아직 깜깜무소식\)
+
   #### 해결: Komodo를 만듬
 
   * Komodo는 고립 실행 환경을 제공함. 그리고 다음과 같은 특징이 있음
+
 * attested
 * on-demand
 * user-mode 
@@ -200,7 +238,7 @@ Atom의 아키텍처는 traffic analysis 공격에 대응하는 구조임. 아�
 
 1. Intel SGX의 복잡성을 문제로 지적했으면 그에 대응하는 단순성이 강조된 설명이 있어야 자연스러운데 요약문으로는 어떤식으로 단순화가 성취되었는지 불분명...
 
-2. Intel SGX 보다 더 낫다고 했으니까, Intel SGX의 일부 기능을 보완하거나 대체하는 기술이 아니라 새로운 방식의 Isolation execution   
+2. Intel SGX 보다 더 낫다고 했으니까, Intel SGX의 일부 기능을 보완하거나 대체하는 기술이 아니라 새로운 방식의 Isolation execution  
    을 제공하는 것인데... 그럴려면 결국 논문에서 제시된 특징 보다 더 복잡한 구현이 나오게 되지 않을까?
 
 
